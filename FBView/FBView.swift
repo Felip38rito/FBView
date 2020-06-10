@@ -26,7 +26,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 0.0 {
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
             setNeedsLayout()
             
@@ -177,9 +177,9 @@ import UIKit
     }
     
     /// Update the visual changes
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        updateView()
-    }
+//    open override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        updateView()
+//    }
 }

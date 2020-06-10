@@ -108,10 +108,4 @@ import UIKit
         self.layer.frame = self.frame
         self.layer.insertSublayer(gradientBackgroundLayer, at: 0)
     }
-    
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        updateView()
-    }
 }
