@@ -176,10 +176,12 @@ import UIKit
         self.layer.insertSublayer(shapeBorderLayer, at: 1)
     }
     
-    /// Update the visual changes
+//    /// Update the visual changes
 //    open override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        updateView()
+//        #if !TARGET_INTERFACE_BUILDER
+//            updateView()
+//        #else
+//            super.layoutSubviews()
+//        #endif
 //    }
 }
