@@ -109,11 +109,10 @@ import UIKit
         self.layer.insertSublayer(gradientBackgroundLayer, at: 0)
     }
     
-//    open override func layoutSubviews() {
-//        #if !TARGET_INTERFACE_BUILDER
-//            updateView()
-//        #else
-//            super.layoutSubviews()
-//        #endif
-//    }
+    #if !TARGET_INTERFACE_BUILDER
+    open override func layoutSubviews() {
+        updateView()
+        super.layoutSubviews()
+    }
+    #endif
 }
