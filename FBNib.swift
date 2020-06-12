@@ -18,9 +18,6 @@ public protocol FBNib {
 
 public extension FBNib {
     /// Defaults to name of the class
-//    static func nibName() -> String {
-//        return String(describing: self)
-//    }
     static var nibName: String {
         get {
             return String(describing: self)
@@ -31,7 +28,7 @@ public extension FBNib {
 /// When the component is UIView based
 public extension FBNib where Self: UIView {
     /// Safe load a view from nib as an optional
-    static func fromNib() -> Self? {
+    static func loadNibView() -> Self? {
         let bundle = Bundle(for: self)
         if let nib = bundle.loadNibNamed(nibName, owner: self, options: nil) {
             if let result = nib.first as? Self {
