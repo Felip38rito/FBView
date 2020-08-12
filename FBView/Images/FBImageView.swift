@@ -28,6 +28,7 @@ public class FBImageView: UIImageView {
     @IBInspectable public var cornerRadius : CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius = self.cornerRadius
+            self.clipsToBounds = true
             updateView()
         }
     }
